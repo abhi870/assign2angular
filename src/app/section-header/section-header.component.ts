@@ -15,6 +15,8 @@ export class SectionHeaderComponent implements OnInit {
   }
   createNote() {
     this.section.notes.push("new Note");
+    console.log("section Header");
+    console.log(this.section);
   }
   closeSection(){
     this.closeSectionEvent.emit(this.section.sectionName);

@@ -8,6 +8,7 @@ import { BoardItemComponent } from './board-item/board-item.component';
 import { SectionHeaderComponent } from './section-header/section-header.component';
 import { SectionComponent } from './section/section.component';
 import { SectionsComponent } from './sections/sections.component';
+import { IdMaintainer } from './shared';
 
 @NgModule({
   declarations: [

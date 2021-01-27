@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
-import { ISection } from '../shared';
+import { ISection, IdMaintainer } from '../shared';
 import { ThrowStmt } from '@angular/compiler';
 
 @Component({
@@ -9,19 +9,22 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class SectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private idMaintainer: IdMaintainer) { }
+
 
   @Input() section: ISection = null;
   @Output() closeSection = new EventEmitter();
   notes: string[] = null;
+  noteId = null;
   sectionName: string = null;
   ngOnInit(): void {
-
+    this.noteId = this.idMaintainer.getId();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     this.notes = this.section.notes;
     this.sectionName = this.section.sectionName;
+    this.noteId = this.idMaintainer.getId();
   }
   closeSectionEvent(event) {
     this.closeSection.emit(event);
