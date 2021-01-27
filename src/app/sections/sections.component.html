@@ -1,0 +1,11 @@
+<div class="secionsMain">
+<div class="sectionController">
+    <input placeholder="section name" #sectionName type="text"/>
+    <button (click)="onAddSection(sectionName.value)">Add Section</button>
+</div>
+<div class="appsections">
+    <div *ngFor="let section of sections">
+        <app-section (closeSection)="closeSectionEvent($event)" [section]="section"></app-section>
+    </div>
+</div>
+</div>

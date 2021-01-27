@@ -1,0 +1,8 @@
+<div class="section">
+    <app-section-header (closeSectionEvent)="closeSectionEvent($event)" [section]="section"></app-section-header>
+    <ul class="sectionList">
+        <li *ngFor="let note of notes">
+            <app-board-item (deleteNoteEvent)="onDelete($event)" [note]="note"></app-board-item>
+        </li>
+    </ul>
+</div>

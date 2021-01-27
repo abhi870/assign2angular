@@ -1,0 +1,15 @@
+.appsections{
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionController{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sectionsMain{
+    display: flex;
+    flex-direction: column;
+}

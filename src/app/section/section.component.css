@@ -1,0 +1,9 @@
+.section{
+    display: flex;
+    flex-direction: column;
+}
+.sectionList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
